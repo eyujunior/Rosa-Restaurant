@@ -1,0 +1,138 @@
+@media screen and (min-width: 900px)
+{
+    section 
+    {
+        padding: 7.9rem;
+    }
+
+    .menu-toggle
+    {
+        display: none;
+    }
+
+    header .nav 
+    {
+        justify-content: space-between;
+    }
+
+    
+    header .nav-list
+        {
+           position: initial;
+           width: initial;
+           height:initial;
+           background-color:transparent;
+           padding: 0;
+           flex-direction: row;
+           justify-content: initial;
+           transform: initial;
+           transition: initial;
+        }
+
+        .nav-item
+        {
+            margin: 0 2rem;
+            border: none;
+
+            &:last-child
+            {
+                margin-right: 0;
+            }
+        }
+        .nav-link
+        {
+            font-size: 1.3rem;
+        }
+    .active
+    {
+        position: relative;
+
+        &::before
+        {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            left: 0;
+            bottom: -3px;
+        }
+    }
+
+    .sub-headline
+    {
+        font-size: 12.2rem;
+        margin-bottom: 1rem;
+    }
+    .headline
+    {
+        font-size: 4.7rem;
+        letter-spacing: .8rem;
+    }
+
+    .line
+    {
+        max-width: 11.4rem;
+    }
+    .restaurant
+    {
+        &-info
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        &-info > div 
+        {
+            flex: 1;
+        }
+    }
+
+    .padding-right
+    {
+        padding-right: 7rem;
+    }
+
+    .footer-content
+    {
+        max-width: 77.5rem;
+        margin: auto;
+
+        &-about
+        {
+            max-width: 51.3rem;
+            margin: 0 auto 5.4rem;
+        }
+
+        &-divider
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .social-media,
+    .newsletter
+    {
+        width: 100%;
+        max-width: 27.5rem;
+        margin: 0 1rem;
+    }
+    .newsletter 
+    {
+        h4 
+        {
+            margin-bottom: 4rem;
+        }
+    }
+
+
+    .btn-news
+    {
+        margin-left: 10.5rem;
+    }
+
+    .footer
+    {
+        padding: 6rem 0 2rem 0;
+    }
+}

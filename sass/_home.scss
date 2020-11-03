@@ -1,0 +1,426 @@
+header
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+
+    .nav
+    {
+        height: 7.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-list
+        {
+            list-style: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--main-font-color-dark);
+            padding: 4.4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1250;
+            transform: translateX(-100%);
+            transition: transform .5s;
+
+        }
+
+        &::before
+        {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,.8);
+            z-index: 1200;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity .5s;
+        }
+
+        &-item
+        {
+            border-bottom: 2px solid rgba(255,255,255,.3);
+        }
+
+        &-link
+        {
+            display: block;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            margin-right: -2px;
+            transition: color .5s;
+
+            &:hover
+            {
+                color:  var(--secondary-font-color);
+            }
+        }
+    }
+}
+.open .fa-times
+{
+    display: block;
+}
+.open .fa-bars
+{
+    display: none;
+}
+.open .nav-list
+{
+    transform: translateX(0);
+}
+.open .nav::before
+{
+    opacity: 1;
+    transform: scale(1);
+}
+.menu-toggle
+{
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+}
+.fa-times
+{
+    display: none;
+}
+///////////////     HEADER SECTION      //////////////
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    background: url("../images/hero.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sub-headline
+{
+    font-size: 8.5rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    font-weight: 200;
+    line-height: .4;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+    animation-delay: .5s;
+}
+.first-letter
+{
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+.single-animation
+{
+    opacity: 0;
+    animation: fadeDown 1s forwards;
+    animation-delay: 1.5s;
+}
+.headline
+{
+    color: #fff;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-right: -0.5rem;
+    opacity: 0;
+    animation: scale 1s forwards;
+
+    &-description h5 
+    {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+        letter-spacing: 3px;
+        margin-right: -3px;
+    }
+}
+.separator
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .line
+    {
+        width: 100%;
+        max-width: 8.4rem;
+        height: .25rem;  
+        background-color: #fff;
+        position: relative;
+        opacity: 0;
+        animation: grow 2s forwards;
+        animation-delay: .9s;
+
+
+        &-right::before,
+        &-left::before
+        {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: .6rem solid transparent;
+            animation: grow .5s forwards;
+            animation-delay: 1.2s;
+
+        }
+        &-right::before
+        {
+            border-right-color: #fff;
+            right: 0;
+        }
+        &-left::before
+        {
+            border-left-color: #fff;
+            left: 0;
+        }
+    }
+
+    .asterisk
+    {
+        font-size: 1.2rem;
+        color: var(--secondary-font-color);
+        margin: 0 1.6rem;
+        opacity: 0;
+        animation: spin 1s forwards;
+        animation-delay: 1.5s;
+
+    }
+}
+///////////////     STORY  SECTION      //////////////
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.global-headline
+{
+    text-align: center;
+    margin-top: 3.9rem;
+
+    .sub-headline
+    {
+        line-height: .42;
+    }
+}
+.story
+{
+    margin-top: 6.9rem;
+
+    .asterisk
+    {
+        color: var(--body-font-color);
+        margin: 2.4rem 0;
+    }
+}
+.headline-dark
+{
+    color: var(--main-font-color-dark);
+    letter-spacing: .7rem;
+    margin-right: -0.7rem;
+}
+.restaurant
+{
+    &-info
+    {
+        text-align: center;
+    }
+    &-desc
+    {
+        margin-bottom: 3rem;
+
+        .paragraph
+        {
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+    }
+}
+///////////////     RECIPES SECTION     //////////////
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.recipes
+{
+    background: url("../images/tasteful-recipes.jpg") center no-repeat;
+    background-size: cover;
+}
+.between
+{
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+}
+///////////////     MENU  SECTION    /////////////////
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.image-grp
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1.5rem;
+}
+.menu
+{
+    .restaurant-desc
+    {
+        padding-top: 3rem;
+        margin-bottom: 0;
+    }
+}
+///////////////     perfect blend SECTION   //////////
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.perfecto
+{
+    background: url("../images/perfect-blend.jpg") center no-repeat;
+    background-size: cover;
+}
+///////////////     FOOTER  SECTION      /////////////
+/////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.footer
+{
+    padding: 7.9rem 0;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    .up
+    {
+        width: 7rem;
+        height: 7rem;
+        background-color: #121212;
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        i 
+        {
+            display: block;
+            color: #fff;
+            font-size: 2rem;
+            padding: 2rem;
+            animation: up 2s infinite;
+        }
+    }
+
+    &-content
+    {
+        overflow: hidden;
+
+        h4 
+        {
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            font-weight: 100;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
+        }
+
+        .asterisk
+        {
+            margin: 2.4rem 0;
+        }
+
+        &-about
+        {
+            margin-bottom: 5.4rem;
+
+            p 
+            {
+                line-height: 2;
+            }
+        }
+    }
+    .social-icons
+    {
+        list-style: none;
+        margin-bottom: 5.4rem;
+        display: flex;
+        justify-content: center;
+
+        i 
+        {
+            font-size: 2rem;
+            color: #fff;
+            padding: 2.8rem 2rem;
+            opacity: .5rem;
+            transition: color .5s;
+
+            &:hover,
+            &:focus
+            {
+                color: var(--secondary-font-color);
+            }
+        }
+    }
+
+    .newsletter
+    {
+        &-form
+        {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-input
+        {
+            width: 100%;
+            max-width: 25rem;
+            padding: 1rem;
+            border-radius: .4rem;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
