@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "A single page Responsive website for a fictional Restaurant.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyujunior/Rosa-Restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyujunior/Rosa-Restaurant/issues"
+  },
+  "homepage": "https://github.com/eyujunior/Rosa-Restaurant#readme",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
