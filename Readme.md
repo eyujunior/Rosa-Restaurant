@@ -7,6 +7,7 @@ external libraries used
 scrollReveal is used for scroll-triggred animations.
 font-awesome for icons
 
+live-link: https://eyujunior.github.io/Rosa-Restaurant/
 
 
 
